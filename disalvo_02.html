@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design as Rhetoric: A Modern Liberal Art</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4e3c3;
+            color: #000000;
+            line-height: 1.5;
+            font-size: 16px;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Side Menu */
+        nav {
+            width: 300px;
+            background-color: #e3d5b6;
+            padding: 20px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            overflow-y: auto;
+        }
+
+        nav h2 {
+            color: #ff4d00;
+            font-size: 20px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ff4d00;
+            padding-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 15px;
+        }
+
+        nav ul li a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            background-color: #e3d5b6;
+            border-left: 4px solid #ff4d00;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #d4c4a8;
+        }
+
+        /* Main Content Area */
+        main {
+            margin-left: 300px;
+            padding: 40px;
+            flex-grow: 1;
+            background-color: #ffffff;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Courier New', monospace;
+            color: #ff4d00;
+            text-transform: uppercase;
+            font-size: 28px;
+            border-bottom: 2px solid #ff4d00;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .morphism-card {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .morphism-title {
+            font-family: 'Courier New', monospace;
+            color: #ff4d00;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .morphism-quote {
+            font-style: italic;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .entities-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .entity-card {
+            background-color: #fff9c4;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .source {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            nav {
+                width: 100%;
+                position: static;
+            }
+
+            main {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .entities-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Design as Rhetoric</h2>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#morphism1">Design Functions as Rhetoric</a></li>
+            <li><a href="#morphism2">Liberal Arts Intersects with Design</a></li>
+            <li><a href="#morphism3">Products Make Arguments</a></li>
+            <li><a href="#morphism4">Foundational Skills Support Design</a></li>
+            <li><a href="#speculative">Speculative Design</a></li>
+            <li><a href="#participatory">Participatory Design</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Design as Rhetoric: A Modern Liberal Art</h1>
+        <div id="content"></div>
+    </main>
+
+    <script>
+        const data = [
+            {
+                id: "intro",
+                morphism: "Why Study and Do Design in a College of Liberal Arts",
+                quote: "Design is a liberal art of the twenty-first century. It belongs to be studied and practiced here.",
+                source: "Carl DiSalvo, Georgia Tech",
+                entities: []
+            },
+            {
+                id: "morphism1",
+                morphism: "Design Functions as Rhetoric",
+                quote: "Rhetoric is a liberal art that provides a structured way of understanding and acting in the world... Design makes arguments: the products of design assert claims about how the world is, could be, or should be.",
+                source: "Carl DiSalvo, 2024",
+                entities: [
+                    "Design and Argument",
+                    "Comparative Products"
+                ]
+            },
+            {
+                id: "morphism2",
+                morphism: "Liberal Arts Intersects with Design",
+                quote: "In a technological world, design becomes a vital liberal art, essential for understanding and shaping society.",
+                entities: [
+                    "Liberal Arts and Technology",
+                    "Practicing Design as Rhetoric"
+                ]
+            },
+            {
+                id: "morphism3",
+                morphism: "Products Make Arguments",
+                quote: "Every product or design asserts a claim about how the world is or should be, influencing societal behaviors and values.",
+                entities: [
+                    "Speculative Design",
+                    "Participatory Design"
+                ]
+            },
+            {
+                id: "morphism4",
+                morphism: "Foundational Skills Support Advanced Design Practice",
+                quote: "Just as a student has to master writing and speaking before crafting a compelling speech, so too are their foundational aspects of design.",
+                source: "Carl DiSalvo, 2024",
+                entities: [
+                    "Visualization and Design Thinking",
+                    "Not Just Grammar"
+                ]
+            },
+            {
+                id: "speculative",
+                morphism: "Speculative Design",
+                quote: "The first is speculative design: a practice of design concerned with futures... Speculative design involves creating prototypes and images of fantastical future products or services to explore the potential implications of future technologies.",
+                source: "Carl DiSalvo, 2024",
+                entities: [
+                    "Designing for the Future",
+                    "Design Fiction"
+                ]
+            },
+            {
+                id: "participatory",
+                morphism: "Participatory Design",
+                quote: "The second field of design I work in is participatory design: a practice of design concerned with enabling people who aren't trained designers to engage design.",
+                source: "Carl DiSalvo, 2024",
+                entities: [
+                    "Co-Design with Non-Designers",
+                    "Political Implications"
+                ]
+            }
+        ];
+
+        function renderContent() {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = data.map(item => `
+                <div id="${item.id}" class="morphism-card">
+                    <h2 class="morphism-title">${item.morphism}</h2>
+                    <p class="morphism-quote">"${item.quote}"</p>
+                    ${item.source ? `<p class="source">Source: ${item.source}</p>` : ''}
+                    ${item.entities.length > 0 ? `
+                        <div class="entities-container">
+                            ${item.entities.map(entity => `
+                                <div class="entity-card">${entity}</div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        renderContent();
+    </script>
+</body>
+</html>
